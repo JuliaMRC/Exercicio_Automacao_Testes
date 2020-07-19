@@ -37,21 +37,21 @@ def printChar(freq):
 
 #----------Fim funções
 
-PATH = ".\chromedriver.exe"
+PATH = '.\chromedriver.exe'
 browser = webdriver.Chrome(PATH)
 
 # Abrindo a pagina
-browser.get("https://selenium-python.readthedocs.io/")
+browser.get('https://selenium-python.readthedocs.io/')
 
 # Encontro sidebar navigation
 sideBar = browser.find_element_by_class_name('sphinxsidebarwrapper')
 
-# Encontro e acesso link para Getting Started
+# Busco e acesso o link para Getting Started dentro do sideBar
 gs_link = sideBar.find_element_by_xpath('//a[@href="getting-started.html"]')
 gs_link.click()
 
 # Encontro o texto "Getting Started" na tela
-gs_find = browser.find_elements_by_xpath("//*[contains(text(), 'Getting Started')]")
+gs_find = browser.find_elements_by_xpath('//*[contains(text(), "Getting Started")]')
 
 # Esse passo abaixo foi necessário pois quando printei gs_find, estavam as duas vezes q Getting Started aparece na página e mais um elemento vazio 
 gs_list = [item for item in gs_find if len(item.text) > 0]
