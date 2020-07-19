@@ -27,13 +27,13 @@ def printChar(freq):
     lista = [item for item in freq if item[1]>1]
 
     if len(lista) > 0:
-        print("A string “Getting Started” possui caracteres repetidos!\n")
+        print('A string “Getting Started” possui caracteres repetidos!\n')
 
         for char in lista:
             print('* %c aparece %d vezes' %(char[0], char[1]))
 
     else:
-        print("A string “Getting Started” não possui caracteres repetidos!")
+        print('A string “Getting Started” não possui caracteres repetidos!')
 
 #----------Fim funções
 
